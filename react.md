@@ -8,7 +8,7 @@
 
 
 
-## 基本规则
+## 基本规范
 
 - 每个文件只包括一个文件
   - 每个文件允许多个无状态或纯组件。
@@ -63,7 +63,9 @@
   }
   ```
 
-## Naming
+
+
+## 命名
 
 - **Extensions**: Use `.jsx` extension for React components.
 - **Filename**: Use PascalCase for filenames. E.g., `ReservationCard.jsx`.
@@ -106,17 +108,17 @@
         return <WrappedComponent {...props} foo />;
       }
     }
-    
+
     // good
     export default function withFoo(WrappedComponent) {
       function WithFoo(props) {
         return <WrappedComponent {...props} foo />;
       }
-    
+        
       const wrappedComponentName = WrappedComponent.displayName
         || WrappedComponent.name
         || 'Component';
-    
+        
       WithFoo.displayName = `withFoo(${wrappedComponentName})`;
       return WithFoo;
     }
@@ -129,7 +131,7 @@
     ​```jsx
     // bad
     <MyComponent style="fancy" />
-    
+
     // good
     <MyComponent variant="fancy" />
     ​```
@@ -186,13 +188,13 @@
     ​```jsx
     // bad
     <Foo bar='bar' />
-    
+
     // good
     <Foo bar="bar" />
-    
+
     // bad
     <Foo style={{ left: "20px" }} />
-    
+
     // good
     <Foo style={{ left: '20px' }} />
     ​```
@@ -281,7 +283,7 @@
     ​```jsx
     // bad
     <img src="hello.jpg" alt="Picture of me waving hello" />
-    
+
     // good
     <img src="hello.jpg" alt="Me waving hello" />
     ​```
@@ -461,24 +463,24 @@
       onClickDiv() {
         // do stuff
       }
-    
+        
       render() {
         return <div onClick={this.onClickDiv.bind(this)} />
       }
     }
-    
+
     // good
     class extends React.Component {
       constructor(props) {
         super(props);
-    
+        
         this.onClickDiv = this.onClickDiv.bind(this);
       }
-    
+        
       onClickDiv() {
         // do stuff
       }
-    
+        
       render() {
         return <div onClick={this.onClickDiv} />
       }
@@ -494,16 +496,16 @@
       _onClickSubmit() {
         // do stuff
       },
-    
+        
       // other stuff
     });
-    
+
     // good
     class extends React.Component {
       onClickSubmit() {
         // do stuff
       }
-    
+        
       // other stuff
     }
     ​```

@@ -8,6 +8,12 @@
 
 
 
+1. [React/JSX 编码规范](https://github.com/JasonBoy/javascript/tree/master/react)
+2. [ES6](https://github.com/yuche/javascript)
+3. [CSS-in-JavaScript](https://github.com/airbnb/javascript/tree/master/css-in-javascript)
+
+
+
 
 
 
